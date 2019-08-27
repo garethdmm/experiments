@@ -20,3 +20,5 @@ An example with the default settings. 8 exchanges, 2 bets per trader.
 If we increase the number of exchanges and traders, and increase the premium decay.
 
 ![alttext](img/20-3-high-premium-decay.png)
+
+You can experiment yourself to see who wins by tweaking the parameters. Aside from the number of exchanges and bets-per-trader, the most important are `RUIN_DECAY` and `PREMIUM_DECAY`, which determine how quickly the exchanges get safer, and how quickly their hazard premium decreases from the most risky to least risky. You can also tweak the `MAX_PREMIUM`, `MAX_RISK`, and `NUM_STEPS` for interesting results.

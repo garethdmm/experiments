@@ -1,6 +1,8 @@
 Ruin Simulation
 ---------------
 
+Companion code to the blogpost: ["How we survived 5 years in the most dangerous market in the world"](https://medium.com/@garethmacleod/how-we-survived-5-years-in-the-most-dangerous-market-in-the-world-c1404e0ab5b9)
+
 A simple simulation of risk-taking in a domain where risk premiums come with a
 proportional chance of ruin. Based on the real world challenge of trading firms choosing
 cryptocurrency exchanges to trade on.
@@ -22,3 +24,7 @@ If we increase the number of exchanges and traders, and increase the premium dec
 ![alttext](img/20-3-high-premium-decay.png)
 
 You can experiment yourself to see who wins by tweaking the parameters. Aside from the number of exchanges and bets-per-trader, the most important are `RUIN_DECAY` and `PREMIUM_DECAY`, which determine how quickly the exchanges get safer, and how quickly their hazard premium decreases from the most risky to least risky. You can also tweak the `MAX_PREMIUM`, `MAX_RISK`, and `NUM_STEPS` for interesting results.
+
+There are a few improvements I'd like to make:
+* The parameters so far have been chosen fairly arbitrarily. It would be great to do work to set them according to some historical data, such as the number of crypto exchanges that really were created 2012-2019, the number of them that blew up, and reasonable guesses for return characteristics in each tick.
+* We should try letting Traders pick their bets randomly, this would show less correlation between their returns. Although arguably, traders returns *are* correlated.

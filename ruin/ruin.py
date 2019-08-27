@@ -119,7 +119,7 @@ def add_colorbar(colormap):
     #cb.ax.set_yticklabels(['-1', '0', '1'])
     cb.set_ticks([0, 1])
     cb.set_ticklabels(['High', 'Low'])
-    cb.set_label('Risk', rotation=0)
+    cb.set_label('Risk', fontsize=15, rotation=0)
 
 
 def plot_all_returns(traders):
@@ -129,10 +129,15 @@ def plot_all_returns(traders):
     plt.legend().remove()
     add_colorbar(colormaps.plasma)
 
+    pretty_plot()
+
 
 def pretty_plot():
-    plt.xlabel('Time', fontsize=20, labelpad=10, position=(0.5,0.5))
-    plt.ylabel('Returns', position=(1,1), rotation=0, fontsize=20, labelpad=-5)
+    plt.yticks([1])
+    plt.xticks([])
+    plt.xlabel('Time', fontsize=15, labelpad=20)
+    plt.ylabel('Returns', fontsize=15, position=(0, 0.5), labelpad=30, rotation=0)
+
 
 def generate_exchanges():
     return [Exchange(z + MAX_RISK) for z in range(0, NUM_EXCHANGES)]

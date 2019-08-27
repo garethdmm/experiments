@@ -12,3 +12,11 @@ step of the simulation, and each exchange has unique return characteristics dete
 by a single parameter 'z'. At a low z, exchanges give high returns, but there is also a
 high chance that they will "explode" with a complete loss of funds to their traders. As
 z increases, both ruin risk and the excess returns decrease exponentially.
+
+An example with the default settings. 8 exchanges, 2 bets per trader.
+
+![alttext](img/8-2.png)
+
+If we increase the number of exchanges and traders, and increase the premium decay.
+
+![alttext](img/20-3-high-premium-decay.png)
